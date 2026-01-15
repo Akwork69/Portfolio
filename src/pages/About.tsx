@@ -4,6 +4,7 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import AnimatedSection from "../components/AnimatedSection";
 import Footer from "../components/Footer";
+import profileImg from "@/assets/Profile2.png";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -68,7 +69,7 @@ const About = () => {
               <div className="aspect-[4/5] rounded-2xl overflow-hidden glass-intense">
                 <div className="absolute inset-0 bg-gradient-to-br from-secondary/20 to-glow-cyan/10" />
                 <div className="absolute inset-0 flex items-center justify-center">
-                  <img src="/Profile2.png" alt="Profile" />
+                  <img src={profileImg} alt="Profile" />
                   {/* <div className="w-32 h-32 rounded-full bg-gradient-to-br from-secondary to-glow-cyan flex items-center justify-center">
                     <span className="font-display text-4xl font-bold text-primary-foreground">AK</span>
                   </div> */}
