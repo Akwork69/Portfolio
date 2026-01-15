@@ -2,7 +2,13 @@ import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
+import {
+  HashRouter as Router,
+  BrowserRouter,
+  Routes,
+  Route,
+  useLocation,
+} from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
 import Navigation from "./components/Navigation";
 import PageTransition from "./components/PageTransition";
@@ -83,11 +89,11 @@ const App = () => (
     <TooltipProvider>
       <Toaster />
       <Sonner />
-      <BrowserRouter future={{ v7_startTransition: true }}>
+      <Router>
         <Navigation />
         <AnimatedRoutes />
         <div className="noise-overlay" />
-      </BrowserRouter>
+      </Router>
     </TooltipProvider>
   </QueryClientProvider>
 );
